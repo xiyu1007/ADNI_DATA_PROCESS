@@ -3,13 +3,13 @@ import os.path
 import pandas as pd
 
 # 读取数据
-data = pd.read_csv('ADNI2_MRI&PET_ACPC_Y1&Y2.csv')
+data = pd.read_csv('idaSearch_12_01_2024.csv')
 target_root = '.'
 
 re_path = 'Web_BOTH_MRI_PET.csv'
 mi_path = 'Web_MISS_MRI_oR_PET.csv'
 
-Id = 'subject_id'
+Id = 'Subject ID'
 
 
 def Filter(Data, result_path, miss_path, moveTotargetpath=True):
@@ -29,7 +29,6 @@ def Filter(Data, result_path, miss_path, moveTotargetpath=True):
         # 分离 MRI 和 PET 数据
         mri_data = subject_data[subject_data['Modality'] == 'MRI']
         pet_data = subject_data[subject_data['Modality'] == 'PET']
-
         # 确保只保留一条 MRI 和一条 PET
         if not pet_data.empty and not mri_data.empty:
             matched_mri = mri_data[mri_data['Type'] == 'Processed']
