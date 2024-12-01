@@ -3,13 +3,13 @@ import os.path
 import pandas as pd
 
 # 读取数据
-data = pd.read_csv('idaSearch_11_30_2024.csv')
+data = pd.read_csv('ADNI2_MRI&PET_ACPC_Y1&Y2.csv')
 target_root = '.'
 
 re_path = 'Web_BOTH_MRI_PET.csv'
 mi_path = 'Web_MISS_MRI_oR_PET.csv'
 
-Id = 'Subject ID'
+Id = 'subject_id'
 
 
 def Filter(Data, result_path, miss_path, moveTotargetpath=True):
