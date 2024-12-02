@@ -1,8 +1,6 @@
 # 根据filtered_data.csv，将对应数据集的dicom数据移出/复制到指定目录
 import os
 import shutil
-import time
-
 import pandas as pd
 import re
 from tqdm import tqdm

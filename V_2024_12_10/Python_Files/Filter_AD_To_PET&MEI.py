@@ -30,9 +30,9 @@ mi_path = 'MISS_MRI_oR_PET.csv'
 endswith = ('.dcm', '.v', '.i', '.i.hdr', '.hdr','.nii')
 
 if __name__ == '__main__':
-    Modality = ['MRI']  # 选择需要处理的模态数据
-    # Move_Trim(ID,Modality, root_directory, target_root, csv_path,
-    #           move_miss_path, endswith, moveNocopy)
+    Modality = ['MRI','PET']  # 选择需要处理的模态数据
+    Move_Trim(ID,Modality, root_directory, target_root, csv_path,
+              move_miss_path, endswith, moveNocopy)
 
     # # TODO 修改DICOM2NII.py中的exe等文件路径
     # niiCopy 如果存在nii文件则直接复制而不是转换

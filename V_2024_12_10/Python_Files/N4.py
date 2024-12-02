@@ -1,6 +1,4 @@
-import datetime
 import os
-import time
 
 from tqdm import tqdm
 import SimpleITK as sitk

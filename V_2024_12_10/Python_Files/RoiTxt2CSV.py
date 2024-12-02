@@ -1,5 +1,3 @@
-import csv
-
 # 输入文件路径
 input_file = 'AAL3v1_1mm.nii.txt'
 # 输出文件路径
