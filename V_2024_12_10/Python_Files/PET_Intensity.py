@@ -82,6 +82,8 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
 
             if SUVr:
                 sid,_ = os.path.splitext(nii_filename)
+                sid = sid[len(prefix):]
+                # sid = sid.removeprefix(prefix)
                 weight_ = s_info[s_info[ID] == sid]['Weight']
                 if len(weight_) >0:
                     weight = float(weight_.iloc[0]) * 1000
@@ -139,6 +141,6 @@ if __name__ == '__main__':
 
 
     # 除intensity之外，是否(0)计算小脑区域的值，计算ROI体积，SUVr(SUVr必须传入包含患者体重的Subject_info)
-    get_pet_data(ROI, PET, output_csv, prefix, cerebellar=False,
+    get_pet_data(ROI, PET, output_csv, prefix, cerebellar=True,
                  Vox_mm3=True, roi_info=ROI_INFO, subject_info=Subject_Info_path, SUVr=True)
 
