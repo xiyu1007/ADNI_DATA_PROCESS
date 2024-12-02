@@ -1,3 +1,5 @@
+% 分割出现任何错误请尝试去除所有SPM路径再添加后重试
+% 若还是不行则，重新安装最新SPM,注意记得备份cat12，否则记得重新下载cat12
 % 使用示例
 % 输入目录
 inputDir = 'D:\Matlab\Project\Datasets\AD\Datasets_Filter_From_Raw\ADNI1\DICOM2Nii\MRI';    
