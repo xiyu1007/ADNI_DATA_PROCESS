@@ -1,0 +1,171 @@
+ROIid;ROIabbr;ROIname;ROIcolor;中文名称;是否属于小脑
+1;lPreCG;Left Precentral gyrus;203 142 203;左侧中央前回;否
+2;rPreCG;Right Precentral gyrus;203 142 203;右侧中央前回;否
+3;lSFG;Left Superior frontal gyrus-dorsolateral;0 117 115;左侧背外侧额上回;否
+4;rSFG;Right Superior frontal gyrus-dorsolateral;0 117 115;右侧背外侧额上回;否
+5;lMFG;Left Middle frontal gyrus;191 23 23;左侧额中回;否
+6;rMFG;Right Middle frontal gyrus;191 23 23;右侧额中回;否
+7;lIFGoperc;Left Inferior frontal gyrus-opercular part;198 198 2;左侧岛盖部额下回;否
+8;rIFGoperc;Right Inferior frontal gyrus-opercular part;198 198 2;右侧岛盖部额下回;否
+9;lIFGtriang;Left Inferior frontal gyrus-triangular part;149 203 203;左侧三角部额下回;否
+10;rIFGtriang;Right Inferior frontal gyrus-triangular part;149 203 203;右侧三角部额下回;否
+11;lIFGorb;Left IFG pars orbitalis;102 102 102;左侧眶部额下回;否
+12;rIFGorb;Right IFG pars orbitalis;102 102 102;右侧眶部额下回;否
+13;lROL;Left Rolandic operculum;203 203 108;左侧中央沟盖;否
+14;rROL;Right Rolandic operculum;203 203 108;右侧中央沟盖;否
+15;lSMA;Left Supplementary motor area;152 69 47;左侧辅助运动区;否
+16;rSMA;Right Supplementary motor area;152 69 47;右侧辅助运动区;否
+17;lOLF;Left Olfactory cortex;162 81 203;左侧嗅皮质;否
+18;rOLF;Right Olfactory cortex;162 81 203;右侧嗅皮质;否
+19;lSFGmedial;Left Superior frontal gyrus-medial;0 254 0;左侧内侧额上回;否
+20;rSFGmedial;Right Superior frontal gyrus-medial;0 254 0;右侧内侧额上回;否
+21;lPFCventmed;Left Superior frontal gyrus-medial orbital;203 203 3;左侧眶内额上回;否
+22;rPFCventmed;Right Superior frontal gyrus-medial orbital;203 203 3;右侧眶内额上回;否
+23;lREC;Left Gyrus rectus;76 47 127;左侧直回;否
+24;rREC;Right Gyrus rectus;76 47 127;右侧直回;否
+25;lOFCmed;Left Medial orbital gyrus;54 54 203;左侧内侧眶回;否
+26;rOFCmed;Right Medial orbital gyrus;54 54 203;右侧内侧眶回;否
+27;lOFCant;Left Anterior orbital gyrus;0 203 0;左侧前眶回;否
+28;rOFCant;Right Anterior orbital gyrus;0 203 0;右侧前眶回;否
+29;lOFCpost;Left Posterior orbital gyrus;162 0 54;左侧后眶回;否
+30;rOFCpost;Right Posterior orbital gyrus;162 0 54;右侧后眶回;否
+31;lOFClat;Left Lateral orbital gyrus;254 254 4;左侧外侧眶回;否
+32;rOFClat;Right Lateral orbital gyrus;254 254 4;右侧外侧眶回;否
+33;lINS;Left Insula;184 148 39;左侧脑岛;否
+34;rINS;Right Insula;184 148 39;右侧脑岛;否
+35;lACC;Left Anterior cingulate & paracingulate gyri;0 203 203;左侧前扣带和旁扣带回;否
+36;rACC;Right Anterior cingulate & paracingulate gyri;0 203 203;右侧前扣带和旁扣带回;否
+37;lMCC;Left Middle cingulate & paracingulate gyri;128 102 0;左侧中扣带和旁扣带回;否
+38;rMCC;Right Middle cingulate & paracingulate gyri;128 102 0;右侧中扣带和旁扣带回;否
+39;lPCC;Left Posterior cingulate gyrus;0 203 0;左侧后扣带回;否
+40;rPCC;Right Posterior cingulate gyrus;0 203 0;右侧后扣带回;否
+41;lHIP;Left Hippocampus;203 142 203;左侧海马;否
+42;rHIP;Right Hippocampus;203 142 203;右侧海马;否
+43;lPHG;Left Parahippocampal gyrus;162 54 13;左侧海马旁回;否
+44;rPHG;Right Parahippocampal gyrus;162 54 13;右侧海马旁回;否
+45;lAMYG;Left Amygdala;203 203 3;左侧杏仁核;否
+46;rAMYG;Right Amygdala;203 203 3;右侧杏仁核;否
+47;lCAL;Left Calcarine fissure and surrounding cortex;162 0 56;左侧距状裂及周围皮质;否
+48;rCAL;Right Calcarine fissure and surrounding cortex;162 0 56;右侧距状裂及周围皮质;否
+49;lCUN;Left Cuneus;203 102 0;左侧楔叶;否
+50;rCUN;Right Cuneus;203 102 0;右侧楔叶;否
+51;lLING;Left Lingual gyrus;0 200 203;左侧舌回;否
+52;rLING;Right Lingual gyrus;0 200 203;右侧舌回;否
+53;lSOG;Left Superior occipital gyrus;94 0 26;左侧上枕回;否
+54;rSOG;Right Superior occipital gyrus;94 0 26;右侧上枕回;否
+55;lMOG;Left Middle occipital gyrus;204 204 204;左侧中枕回;否
+56;rMOG;Right Middle occipital gyrus;204 204 204;右侧中枕回;否
+57;lIOG;Left Inferior occipital gyrus;72 72 200;左侧下枕回;否
+58;rIOG;Right Inferior occipital gyrus;72 72 200;右侧下枕回;否
+59;lFFG;Left Fusiform gyrus;81 0 176;左侧梭状回;否
+60;rFFG;Right Fusiform gyrus;81 0 176;右侧梭状回;否
+61;lPoCG;Left Postcentral gyrus;162 0 54;左侧中央后回;否
+62;rPoCG;Right Postcentral gyrus;162 0 54;右侧中央后回;否
+63;lSPG;Left Superior parietal gyrus;134 53 0;左侧上顶回;否
+64;rSPG;Right Superior parietal gyrus;134 53 0;右侧上顶回;否
+65;lIPG;Left Inferior parietal gyrus-excluding supramarginal and angular gyri;122 203 67;左侧下顶回（不包括缘上回和角回）;否
+66;rIPG;Right Inferior parietal gyrus-excluding supramarginal and angular gyri;122 203 67;右侧下顶回（不包括缘上回和角回）;否
+67;lSMG;Left SupraMarginal gyrus;94 69 54;左侧缘上回;否
+68;rSMG;Right SupraMarginal gyrus;94 69 54;右侧缘上回;否
+69;lANG;Left Angular gyrus;0 135 203;左侧角回;否
+70;rANG;Right Angular gyrus;0 135 203;右侧角回;否
+71;lPCUN;Left Precuneus;13 176 67;左侧前楔叶;否
+72;rPCUN;Right Precuneus;13 176 67;右侧前楔叶;否
+73;lPCL;Left Paracentral lobule;0 200 0;左侧顶中央小叶;否
+74;rPCL;Right Paracentral lobule;0 200 0;右侧顶中央小叶;否
+75;lCAU;Left Caudate nucleus;108 0 162;左侧尾状核;否
+76;rCAU;Right Caudate nucleus;108 0 162;右侧尾状核;否
+77;lPUT;Left Lenticular nucleus-Putamen;61 61 203;左侧壳核;否
+78;rPUT;Right Lenticular nucleus-Putamen;61 61 203;右侧壳核;否
+79;lPAL;Left Lenticular nucleus-Pallidum;203 203 0;左侧苍白球;否
+80;rPAL;Right Lenticular nucleus-Pallidum;203 203 0;右侧苍白球;否
+81;lTHA;Left Thalamus;162 54 13;左侧丘脑;否
+82;rTHA;Right Thalamus;162 54 13;右侧丘脑;否
+83;lHES;Left Heschls gyrus;94 13 13;左侧赫氏回;否
+84;rHES;Right Heschls gyrus;94 13 13;右侧赫氏回;否
+85;lSTG;Left Superior temporal gyrus;203 53 0;左侧颞上回;否
+86;rSTG;Right Superior temporal gyrus;203 53 0;右侧颞上回;否
+87;lTPOsup;Left Temporal pole: superior temporal gyrus;38 0 83;左侧颞极：颞上回;否
+88;rTPOsup;Right Temporal pole: superior temporal gyrus;38 0 83;右侧颞极：颞上回;否
+89;lMTG;Left Middle temporal gyrus;162 0 56;左侧颞中回;否
+90;rMTG;Right Middle temporal gyrus;162 0 56;右侧颞中回;否
+91;lTPOmid;Left Temporal pole: middle temporal gyrus;0 94 92;左侧颞极：颞中回;否
+92;rTPOmid;Right Temporal pole: middle temporal gyrus;0 94 92;右侧颞极：颞中回;否
+93;lITG;Left Inferior temporal gyrus;128 102 0;左侧颞下回;否
+94;rITG;Right Inferior temporal gyrus;128 102 0;右侧颞下回;否
+95;lCERCRU1;Left Crus I of cerebellar hemisphere;140 36 42;左侧小脑半球Crus I;是
+96;rCERCRU1;Right Crus I of cerebellar hemisphere;140 36 42;右侧小脑半球Crus I;是
+97;lCERCRU2;Left Crus II of cerebellar hemisphere;61 61 203;左侧小脑半球Crus II;是
+98;rCERCRU2;Right Crus II of cerebellar hemisphere;61 61 203;右侧小脑半球Crus II;是
+99;lCER3;Left Lobule III of cerebellar hemisphere;0 152 64;左侧小脑半球III小叶;是
+100;rCER3;Right Lobule III of cerebellar hemisphere;0 152 64;右侧小脑半球III小叶;是
+101;lCER4_5;Left Lobule IV-V of cerebellar hemisphere;203 149 149;左侧小脑半球IV-V小叶;是
+102;rCER4_5;Right Lobule IV-V of cerebellar hemisphere;203 149 149;右侧小脑半球IV-V小叶;是
+103;lCER6;Left Lobule VI of cerebellar hemisphere;0 94 92;左侧小脑半球VI小叶;是
+104;rCER6;Right Lobule VI of cerebellar hemisphere;0 94 92;右侧小脑半球VI小叶;是
+105;lCER7b;Left Lobule VIIB of cerebellar hemisphere;203 0 67;左侧小脑半球VIIB小叶;是
+106;rCER7b;Right Lobule VIIB of cerebellar hemisphere;203 0 67;右侧小脑半球VIIB小叶;是
+107;lCER8;Left Lobule VIII of cerebellar hemisphere;203 149 149;左侧小脑半球VIII小叶;是
+108;rCER8;Right Lobule VIII of cerebellar hemisphere;203 149 149;右侧小脑半球VIII小叶;是
+109;lCER9;Left Lobule IX of cerebellar hemisphere;94 17 76;左侧小脑半球IX小叶;是
+110;rCER9;Right Lobule IX of cerebellar hemisphere;94 17 76;右侧小脑半球IX小叶;是
+111;lCER10;Left Lobule X of cerebellar hemisphere;203 67 16;左侧小脑半球X小叶;是
+112;rCER10;Right Lobule X of cerebellar hemisphere;203 67 16;右侧小脑半球X小叶;是
+113;VER1_2;Lobule I-II of vermis;254 177 254;小脑蚓部I-II小叶;是
+114;VER3;Lobule III of vermis;239 29 29;小脑蚓部III小叶;是
+115;VER4_5;Lobule IV-V of vermis;254 254 0;小脑蚓部IV-V小叶;是
+116;VER6;Lobule VI of vermis;101 0 220;小脑蚓部VI小叶;是
+117;VER7;Lobule VII of vermis;203 203 3;小脑蚓部VII小叶;是
+118;VER8;Lobule VIII of vermis;0 250 0;小脑蚓部VIII小叶;是
+119;VER9;Lobule IX of vermis;160 127 0;小脑蚓部IX小叶;是
+120;VER10;Lobule X of vermis;0 203 0;小脑蚓部X小叶;是
+121;ltAV;Left Thalamus-Anteroventral Nucleus;254 66 0;左侧丘脑前腹核;否
+122;rtAV;Right Thalamus-Anteroventral Nucleus;191 23 23;右侧丘脑前腹核;否
+123;ltLP;Left Lateral posterior;254 254 4;左侧丘脑后外侧;否
+124;rtLP;Right Lateral posterior;128 128 128;右侧丘脑后外侧;否
+125;ltVA;Left Ventral anterior;217 217 217;左侧丘脑腹前核;否
+126;rtVA;Right Ventral anterior;0 117 115;右侧丘脑腹前核;否
+127;ltVL;Left Ventral lateral;90 90 250;左侧丘脑腹外侧核;否
+128;rtVL;Right Ventral lateral;230 185 49;右侧丘脑腹外侧核;否
+129;ltVPL;Left Ventral posterolateral;230 185 49;左侧丘脑腹后外侧核;否
+130;rtVPL;Right Ventral posterolateral;202 0 70;右侧丘脑腹后外侧核;否
+131;ltIL;Left Intralaminar;162 0 56;左侧丘脑内髓板内核群;否
+132;rtIL;Right Intralaminar;76 76 254;右侧丘脑内髓板内核群;否
+133;ltRe;Left Reuniens;76 76 254;左侧丘脑汇合核;否
+134;rtRe;Right Reuniens;0 117 115;右侧丘脑汇合核;否
+135;ltMDm;Left Mediodorsal medial magnocellular;203 203 3;左侧丘脑内侧背核大细胞部;否
+136;rtMDm;Right Mediodorsal medial magnocellular;0 203 0;右侧丘脑内侧背核大细胞部;否
+137;ltMDl;Left Mediodorsal lateral parvocellular;0 250 0;左侧丘脑内侧背核小细胞部;否
+138;rtMDl;Right Mediodorsal lateral parvocellular;254 254 0;右侧丘脑内侧背核小细胞部;否
+139;ltLGN;Left Lateral geniculate;202 0 70;左侧外侧膝状体;否
+140;rtLGN;Right Lateral geniculate;254 186 186;右侧外侧膝状体;否
+141;ltMGN;Left Medial Geniculate;0 117 115;左侧内侧膝状体;否
+142;rtMGN;Right Medial Geniculate;203 67 16;右侧内侧膝状体;否
+143;ltPuA;Left Pulvinar anterior;203 67 16;左侧丘脑枕核前部;否
+144;rtPuA;Right Pulvinar anterior;118 0 33;右侧丘脑枕核前部;否
+145;ltPuM;Left Pulvinar medial;0 190 80;左侧丘脑枕核内侧部;否
+146;rtPuM;Right Pulvinar medial;118 86 68;右侧丘脑枕核内侧部;否
+147;ltPuL;Left Pulvinar lateral;0 169 254;左侧丘脑枕核外侧部;否
+148;rtPuL;Right Pulvinar lateral;162 81 203;右侧丘脑枕核外侧部;否
+149;ltPuI;Left Pulvinar inferior;203 0 67;左侧丘脑枕核下部;否
+150;rtPuI;Right Pulvinar inferior;0 254 0;右侧丘脑枕核下部;否
+151;lACCsub;Left Anterior cingulate cortex-subgenual;254 254 4;左侧前扣带皮质亚属区;否
+152;rACCsub;Right Anterior cingulate cortex-subgenual;149 203 203;右侧前扣带皮质亚属区;否
+153;lACCpre;Left Anterior cingulate cortex-pregenual;186 254 254;左侧前扣带皮质前区;否
+154;rACCpre;Right Anterior cingulate cortex-pregenual;67 67 254;右侧前扣带皮质前区;否
+155;lACCsup;Left Anterior cingulate cortex-supracallosal;254 254 135;左侧前扣带皮质上区;否
+156;rACCsup;Right Anterior cingulate cortex-supracallosal;203 67 16;右侧前扣带皮质上区;否
+157;lNacc;Left Nucleus accumbens;168 66 0;左侧伏隔核;否
+158;rNacc;Right Nucleus accumbens;254 186 186;右侧伏隔核;否
+159;lVTA;Left Ventral tegmental area;254 66 0;左侧腹侧被盖区;否
+160;rVTA;Right Ventral tegmental area;191 23 23;右侧腹侧被盖区;否
+161;lSNpc;Left Substantia nigra-pars compacta;162 0 56;左侧黑质致密部;否
+162;rSNpc;Right Substantia nigra-pars compacta;198 198 2;右侧黑质致密部;否
+163;lSNpr;Left Substantia nigra-pars reticulata;101 0 220;左侧黑质网状部;否
+164;rSNpr;Right Substantia nigra-pars reticulata;135 0 203;右侧黑质网状部;否
+165;lRedN;Left Red nucleus;190 86 59;左侧红核;否
+166;rRedN;Right Red nucleus;118 86 68;右侧红核;否
+167;lLC;Left Locus coeruleus;135 0 203;左侧蓝斑核;否
+168;rLC;Right Locus coeruleus;76 76 254;右侧蓝斑核;否
+169;RapheD;Raphe nucleus-dorsal;118 16 16;背侧缝核;否
+170;RapheM;Raphe nucleus-median;162 54 13;中间缝核;否

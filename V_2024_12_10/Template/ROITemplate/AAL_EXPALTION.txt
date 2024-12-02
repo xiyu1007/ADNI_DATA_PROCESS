@@ -1,0 +1,54 @@
+AAL3 用户指南
+
+自动化解剖分割 AAL3 是针对由蒙特利尔神经学研究所（MNI）提供的经空间标准化的单个高分辨率 T1 体积的自动化解剖分割。这包括 AAL（Tzourio-Mazoyer 等人，2002年）中提供的原始分割，AAL2（Rolls, Joliot, 和 Tzourio-Mazoyer，2015年）中提供的额眶回的新分割，以及本用户指南和 Rolls, Huang, Lin, Feng 和 Joliot（2020年）中描述的新区域。
+
+解剖自动标记（AAL3）是用于功能性脑图谱实验的解剖标记的软件包。它是由法国波尔多的神经功能成像小组（GIN, UMR5296）制作的内部软件包，根据 GNU 通用公共许可证的条款，作为版权免费软件提供给科学界。
+
+下载
+
+AAL 3v2，发布于2024年4月5日：
+
+在 readme 文件中增加了“GNU 通用公共许可证”。
+注意，图谱没有修改，因此它被命名为 AAL3v1（.nii, …）与之前的版本相同。发布于2024年4月5日。
+2020年6月10日发布的更新涉及丘脑分割的小变化，以与 Freesurfer 7 的更新保持一致（AAL 3v1）。
+2019年8月30日发布的 AAL 3 新版本包括前扣带、丘脑和脑核（伏隔核、黑质、腹侧被盖区、红核、蓝斑核和缝核）的新版本。
+SPM12 版本的 AAL3 软件：AAL3v2_for_SPM12.zip
+
+用户指南
+
+在最初的自动化解剖标记图谱 AAL 版本（Tzourio-Mazoyer 等人，2002年）之后，开发了第二版本（AAL2）（Rolls, Joliot, 和 Tzourio-Mazoyer，2015年），提供了额眶回的替代分割。现在我们提供了第三版本 AAL3，它增加了一些之前未定义但许多神经影像学研究感兴趣的大脑区域。第三版本中的新区域包括前扣带皮层的细分为亚属、前属和上扣带部分；丘脑的核的细分；伏隔核、黑质、腹侧被盖区、红核、蓝斑核和缝核。新图谱可作为 SPM 的工具箱使用，并可与 MRIcron 一起使用。
+
+请注意，在 AAL3 中，AAL2 中前扣带皮层（35, 36）和丘脑（81, 82）的原始编号被留空，因为这些体素被新的细分所替代（丘脑核：121-151；ACC：151-156）。因此，AAL3 中的分割总数为 166，最大标签编号为 170。这确保了 AAL2 中使用的大多数编号在 AAL3 中保持不变，而 AAL3 主要增加了从编号 121 开始的新区域。
+
+还请注意，在 AAL3 中定义的一些较小区域的使用需要谨慎，原因由 Rolls, Huang, Lin, Feng 和 Joliot（2020年）给出。此外，如果 AAL3 被重新采样为例如 3x3x3 mm，一些较小的区域可能不再被定义。
+
+档案内容
+
+所有带有 “.m” 扩展名的文件都是 AAL3.m 代码的一部分。
+nifti/gz 文件 AAL3v1.nii / ROI_MNI_V7.nii / AAL3v1.nii.gz 包含相同的体积数据，但头部和压缩不同，以适应不同类型的软件需求，分别是 AAL3 / spm（结果-图谱）/ MRIcron。
+同样适用于三个文件：AAL3v1_1mm.nii / ROI_MNI_V7_1mm.nii / AAL3v1_1mm.nii.gz。
+如何在 Unix 系统上安装软件
+
+将档案复制到所选位置（例如 /usr/local/soft/spm12/toolbox），移除旧的 AAL3 目录。
+解压和解压缩档案将创建一个 AAL3 目录。
+将此目录添加到您的 Matlab 路径，并复制 4 个文件到您的 SPM12/atlas 目录。
+要为 mricron 软件安装 AAL3：
+如何在 Mac 或 Windows 系统上安装软件
+
+AAL3v2_for_SPM12.zip 文件与 Mac 和 Windows 系统兼容。安装取决于您本地安装的 SPM 和 Mricron 软件。
+
+如何使用软件
+
+可以使用 AAL3（见 1）或 spm（见 2）。
+
+使用 AAL3 1.1) 如何启动 AAL3 - 第一个选项：从 SPM12 启动 AAL3： 1.2) 选择标记程序。3个选择在论文（Tzourio-Mazoyer 等人，2002年）中有解释和记录：局部最大值标记、扩展局部最大值标记和簇标记。 1.3) 选择解剖分割数据库 1.4) 然后在图形窗口中获得坐标上的标签。
+使用 spm 图谱标记功能：“spm（结果-图谱）” 2.1) 从命令窗口启动 spm 2.2) 在常规“结果”中选择所需的对比度、掩码、概率和范围阈值。在 SPM12 结果窗口中：图谱/使用/AAL3v1 标记 2.3) 然后在图形窗口中通过右键点击坐标获得标签。
+原始参考
+
+自动化解剖标记在 SPM 中的使用，使用 MNI MRI 单个体大脑的宏观解剖分割。N. Tzourio-Mazoyer, B. Landeau, D. Papathanassiou, F. Crivello, O. Étard, N. Delcroix, B. Mazoyer, 和 M. Joliot. NeuroImage 2002. 15: 273-289.
+
+在自动化解剖标记图谱中实现额眶回的新分割。Rolls M & Tzourio-Mazoyer N (2015) NeuroImage 122: 1-5. http://dx.doi.org/10.1016/j.neuroimage.2015.07.075
+
+参考
+
+Rolls, E.T., Huang, C.C., Lin, C.-P., Feng, J., Joliot, M., 2020. 自动解剖标记图谱 3, Neuroimage 206:116189. https://doi.org/10.1016/j.neuroimage.2019.116189
