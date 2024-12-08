@@ -34,6 +34,7 @@ def get_header(roi_info,Vox_mm3,SUVr):
     return header
 
 def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=False, Vox_mm3=True, roi_info=None, subject_info=None, SUVr=False):
+    print('Initializing...')
     ID = 'Subject ID'
     Injected_dose = 185  # MBq，FDG-PET Reference ADNI
     cerebellar_ID = []  # 95~120
@@ -59,6 +60,25 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
         nii_files = [f for f in os.listdir(nii_dir) if
                      (f.endswith('.nii') or f.endswith('.nii.gz')) and f.startswith(startswith)]
 
+
+        # 读取mask文件，获取唯一值
+        mask = sitk.ReadImage(mask_path)
+        mask_array = sitk.GetArrayFromImage(mask)
+        unique_values = np.unique(mask_array)[np.unique(mask_array) != 0]  # 排除0
+
+        # 创建字典来存储每个值的索引
+        indices_dict = {}
+        for value in unique_values:
+            indices = np.argwhere(mask_array == value)  # 获取每个值的索引
+            indices_dict[value] = indices  # 将索引保存到字典中
+
+        # 检查ROI长度与MASK长度是否一致
+        if len(unique_values) != len(roi_info):
+            print(f"\nROI_INFO长度({len(roi_info)})"
+                  f"ROI.nii({len(unique_values)})不一致,导致对应roi为0")
+        header = get_header(roi_info,Vox_mm3,SUVr)
+        writer.writerow(header)
+
         for nii_filename in tqdm(nii_files, desc="Processing NIfTI Files", unit="file"):
             ce_suv = 1
             weight = -1
@@ -66,21 +86,6 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
             nii_path = os.path.join(nii_dir, nii_filename)
             nii = sitk.ReadImage(nii_path)
             nii_array = sitk.GetArrayFromImage(nii)
-
-            # 读取mask文件，获取唯一值
-            mask = sitk.ReadImage(mask_path)
-            mask_array = sitk.GetArrayFromImage(mask)
-            unique_values = np.unique(mask_array)[np.unique(mask_array) != 0]  # 排除0
-
-            # 如果没有提供roi_info，创建默认的ROI信息
-            if not write_header:
-                # 检查ROI长度与MASK长度是否一致
-                if len(unique_values) != len(roi_info):
-                    print(f"\nROI_INFO长度({len(roi_info)})"
-                          f"ROI.nii({len(unique_values)})不一致,导致对应roi为0")
-                header = get_header(roi_info,Vox_mm3,SUVr)
-                writer.writerow(header)
-                write_header = True
 
             if SUVr:
                 sid,_ = os.path.splitext(nii_filename)
@@ -94,7 +99,7 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
                 sum_ce = 0
                 for ci in cerebellar_ID:
                     # 获取template中等于当前值的所有索引
-                    indices = np.argwhere(mask_array == ci)
+                    indices = indices_dict[ci]
                     # ce_vox_num = len(indices)
                     ce_vox_in = nii_array[tuple(indices.T)]  # 转置索引，使其符合np的索引格式
                     # sum_ce += np.mean(ce_vox_in)
@@ -110,14 +115,14 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
                     pass
                 else: # value in unique_values
                     # 获取template中等于当前值的所有索引
-                    indices = np.argwhere(mask_array == value)
+                    indices = indices_dict[value]
                     intensity = nii_array[tuple(indices.T)]  # 转置索引，使其符合np的索引格式
                     avg_intensity = np.mean(intensity)
-                    sum_intensity = np.sum(intensity)
-
+                    if SUVr:
+                        sum_intensity = np.sum(intensity)
+                        roi_suv = sum_intensity/(Injected_dose/weight) if weight != -1 else 0
+                        roi_suvr = roi_suv/ce_suv
                     vox_mm3 = len(indices)
-                    roi_suv = sum_intensity/(Injected_dose/weight) if weight != -1 else 0
-                    roi_suvr = roi_suv/ce_suv
 
                 average_values.append(str(avg_intensity))
                 if Vox_mm3:
@@ -131,9 +136,9 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
 
 if __name__ == '__main__':
     # 使用示例
-    ROI = 'Template/aal3.nii' #ROI的路径
-    PET = 'Template'  # 配准并norm后的PET目录
-    prefix = ''  # 与配准后的pet文件格式对应: wr表示处理wr开头的数据
+    ROI = 'Template/Reslice_aal3.nii' #ROI的路径
+    PET = 'D:\Matlab\Project\Datasets\AD\Datasets_Filter_From_Raw\ADNI1\DICOM2Nii\PET'  # 配准并norm后的PET目录
+    prefix = 'wr'  # 与配准后的pet文件格式对应: wr表示处理wr开头的数据
     # Subject_Info是在筛选数据时的信息文件csv
     subject_Info = 'ADNI1/output/Web_BOTH_MRI_PET.csv'
     roi_csv = 'Template/aal3.csv'  # ROI信息文件路径
