@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 
 
@@ -36,6 +38,7 @@ def align_data(info_path, pet_path, mri_path,delimiter=','):
     assert len(pet_df) == len(mri_df), f'数据长度不一致：MRI({len(pet_df)}), PET({len(mri_df)})'
 
     if len(pet_df) * 2 != len(info_df):
+        print(f'存在的数据长度{len(pet_df) * 2}，Info的数据长度{len(info_df)}')
         print('Waring: 检查Failed_Dcm2Nii.csv，是否存在nii转换失败文件，该警告不会影响转换成功的数据')
 
     # 4. 提取 PET 和 MRI 数据的 ID，并进行格式化
@@ -52,8 +55,9 @@ def align_data(info_path, pet_path, mri_path,delimiter=','):
     mri_df = pd.merge(mri_df, info_mri, how='left', left_on='Subject', right_on='Subject')
     mri_df = mri_df[header_keep + [col for col in mri_df.columns if col not in header_keep]]
 
-    pet_df.to_csv(f'CSV/Align_DATA_PET.csv', index=False)
-    mri_df.to_csv(f'CSV/Align_DATA_PET.csv', index=False)
+    os.makedirs('Result', exist_ok=True)
+    pet_df.to_csv(f'Result/Align_DATA_PET.csv', index=False)
+    mri_df.to_csv(f'Result/Align_DATA_MRI.csv', index=False)
 
     print(f'数据已对齐')
 
@@ -61,8 +65,8 @@ def align_data(info_path, pet_path, mri_path,delimiter=','):
 
 if __name__ == '__main__':
     # 1. 读取 infoCsv 文件
-    info_path = f'CSV/BOTH_MRI_PET.csv'
+    info_path = f'ADNI1/output/Web_BOTH_MRI_PET.csv'
     pet_path = f'PET_DATA.csv'
-    mri_path = f'MRI_Vgm.csv'
+    mri_path = f'ROI_aal3_Vgm.csv'
 
     align_data(info_path, pet_path, mri_path,delimiter=',')
