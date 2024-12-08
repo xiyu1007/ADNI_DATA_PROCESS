@@ -7,7 +7,7 @@ function Reslice_ROI(ref,source,interp,verbose)
             return
         end
         f=strtrim(p(1,:));
-        def = deblank(f); %删除路径末尾空白字符
+        ref = deblank(f); %删除路径末尾空白字符
     end
     if nargin < 2 
         p=spm_select(1,'.nii');
