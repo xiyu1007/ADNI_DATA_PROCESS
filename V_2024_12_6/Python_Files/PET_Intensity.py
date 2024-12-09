@@ -87,10 +87,11 @@ def get_pet_data(mask_path, nii_dir, output_csv, startswith='r', cerebellar=Fals
             nii = sitk.ReadImage(nii_path)
             nii_array = sitk.GetArrayFromImage(nii)
 
+            sid, _ = os.path.splitext(nii_filename)
+            sid = sid[len(prefix):]
+            # sid = sid.removeprefix(prefix)
+
             if SUVr:
-                sid,_ = os.path.splitext(nii_filename)
-                sid = sid[len(prefix):]
-                # sid = sid.removeprefix(prefix)
                 weight_ = s_info[s_info[ID] == sid]['Weight']
                 if len(weight_) >0:
                     weight = float(weight_.iloc[0]) * 1000
@@ -147,5 +148,5 @@ if __name__ == '__main__':
     output_csv = 'PET_DATA.csv'  # 输出CSV文件路径
     # 除intensity之外，是否(0)计算小脑区域的值，计算ROI体积，SUVr(SUVr必须传入包含患者体重的Subject_info)
     get_pet_data(ROI, PET, output_csv, startswith=prefix, cerebellar=False,
-                 Vox_mm3=False, roi_info=ROI_INFO, subject_info=subject_Info, SUVr=True)
+                 Vox_mm3=False, roi_info=ROI_INFO, subject_info=subject_Info, SUVr=False)
 
