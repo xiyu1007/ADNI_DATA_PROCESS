@@ -8,8 +8,9 @@ from tqdm import tqdm
 # TODO
 # 指定 dcm2niix.exe 的路径
 # 终端D:\DICOM2NII\MRIcron\Resources\dcm2niix.exe -h查看参数
-dcm2niix_path = r'D:\DICOM2NII\MRIcron\Resources\dcm2niix.exe'  # 请根据实际路径修改
+dcm2niix_path = r"D:\MRIcron\Resources\dcm2niix.exe" # 请根据实际路径修改
 
+# 在Filter_AD_To_PET&MEI.py中调用此程序则无需修改
 ADNI = 'ADNI2'
 Pre_Path = rf'D:\Matlab\Project\Datasets\AD' # 可自定义
 # DICOM转换路径
@@ -109,11 +110,11 @@ def Dcm2Nii(DICOM_Root, Nii_Root, Modality,niiCopy=True,del_er=True, verbose_mod
                     if os.path.exists(nii_to_delete):
                         shutil.rmtree(nii_to_delete)  # 删除文件夹及其内容
             print(f"已删除异常患者文件: {Modality}--{patient_folder}")
-    Write_log(failed_conversions)
+    Write_log(failed_conversions,Nii_Root)
     return failed_conversions
 
 
-def Write_log(failed_conversions):
+def Write_log(failed_conversions,Nii_Root):
     Failed_Dcm2Nii = os.path.join(os.path.dirname(Nii_Root), "Failed_Dcm2Nii.csv")
     if failed_conversions:
         with open(Failed_Dcm2Nii, mode='w+', newline='') as csvfile:
