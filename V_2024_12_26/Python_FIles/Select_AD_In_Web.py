@@ -28,8 +28,8 @@ def Filter(Data, result_path,miss_path,Visit=None,target_root=''):
         pet_data = subject_data[subject_data['Modality'] == 'PET']
         mri_data = subject_data[subject_data['Modality'] == 'MRI']
         if 'Type' in subject_data.columns:
-            pet_data = pet_data[pet_data['Type'] == 'Processed']
-            mri_data = mri_data[mri_data['Type'] == 'Processed']
+            pet_data = pet_data[pet_data['Type'] == 'Pre-processed']
+            mri_data = mri_data[mri_data['Type'] == 'Pre-processed']
         if Visit:
             pet_data = pet_data[pet_data['Visit'] == Visit]
             mri_data = mri_data[mri_data['Visit'] == Visit]
